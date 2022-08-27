@@ -1,0 +1,54 @@
+<%- include('includes/head.ejs') %>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/form.css">
+    <link rel="stylesheet" href="css/coolshow.css">
+    </head>
+
+    <body>
+        <div class="main_container">
+            <%- include('includes/header.ejs') %>
+
+                <%- include('includes/navigation.ejs') %>
+
+                    <div class="main">
+                        <div>
+                            <form
+                                action="<% if (isAuthenticated) { %>/userShowPost <% }else { %>/guetShowPost  <% } %> "
+                                class="guestShowform" method="POST">
+                                <div class="form-control">
+                                    <label for="title">Title:</label>
+                                    <input type="text" name="title" id="title" placeholder="Title">
+                                </div>
+                                <div class="form-control">
+                                    <label for="imageUrl">Image URL:</label>
+                                    <input type="text" name="imageUrl" id="imageUrl" placeholder="Image Url">
+                                </div>
+                                <div class="form-control">
+                                    <label for="description">Description:</label>
+                                    <textarea name="description" id="description" placeholder="Description"></textarea>
+                                </div>
+                                <% if (isAuthenticated) { %>
+                                    <div class="form-control">
+                                        <label for="Visibility" class="visi-label">Visibility:</label>
+                                        <div class="group">
+                                            <label for="public" class="visibility">Public</label>
+                                            <input type="radio" name="visibility" id="visibility" value="public">
+                                        </div>
+                                        <div class="group">
+                                            <label for="private" class="visibility">Private</label>
+                                            <input type="radio" name="visibility" id="visibility" value="private">
+                                        </div>
+                                    </div>
+                                    <% } %>
+                                        <button class="btn" type="submit">Submit</button>
+                            </form>
+                        </div>
+                    </div>
+                    <!--main-->
+
+                    <!-- <%- include('includes/rightSidebar.ejs') %> -->
+        </div>
+        <!--main-container-->
+    </body>
+
+    </html>

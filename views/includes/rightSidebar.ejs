@@ -1,0 +1,18 @@
+<aside class="sidebar-right">
+   
+    <% if (isAuthenticated) { %>
+        <ul>
+            <li>
+                <form action="/logout" method="post">
+                    <button type="submit">Logout</button>
+                </form>
+            </li>
+        </ul>
+    <% } else { %>
+        <ul>
+            <li><a href="/guestshow">Show As A Guest</a></li>
+            <li><a href="/login">Login</a></li>
+            <li><a href="/signup">SignUp</a></li>
+        </ul>
+    <% } %>
+</aside>

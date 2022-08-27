@@ -1,0 +1,9 @@
+.loginform{
+    width: 20rem;
+    max-width: 90%;
+    margin: auto;
+    font-size: 1.2rem;
+    color: blue;
+    font-weight: 600;
+    /* display: block; */
+}

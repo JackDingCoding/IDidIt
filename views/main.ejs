@@ -1,0 +1,50 @@
+<%- include('includes/head.ejs') %>
+    
+    <link rel="stylesheet" href="css/coolItem.css">
+    </head>
+
+    <body>
+        <div class="main_container">
+            <%- include('includes/header.ejs') %>
+
+                <%- include('includes/navigation.ejs') %>
+
+                    <div class="main">
+                        <% if (coolItems.length> 0) { %>
+                            <div class="grid">
+                                <% for (let item of coolItems) { %>
+                                    <!-- <h1><%= coolItems %></h1> -->
+                                    <article class="card cool-item">
+                                        <header class="card__header">
+                                            <h1 class="item-title">
+                                                <%= item.title %>
+                                            </h1>
+                                        </header>
+                                        <div class="card__image">
+                                            <img src="<%= item.imageUrl %>" alt="<%= item.imageUrl %>">
+                                        </div>
+                                        <div class="card__content">
+                                            <p class="item_description">
+                                                <%= item.description %>
+                                            </p>
+                                        </div>
+                                        <div class="card__content">
+                                            <p class="item_description">
+                                                Published By: <%= item.author %>
+                                            </p>
+                                        </div>
+                                    </article>
+                                    <% } %>
+                            </div>
+                            <!--grid-->
+                            <% } else { %>
+                                <h1>NO COOL SHOW YET!</h1>
+                                <% } %>
+                    </div>
+                    <!--main-->
+
+                    <!-- <%- include('includes/rightSidebar.ejs') %> -->
+        </div>
+    </body>
+
+    </html>

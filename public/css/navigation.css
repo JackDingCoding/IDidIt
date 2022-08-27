@@ -1,0 +1,42 @@
+nav ul{
+    display:flex;
+    list-style: none;
+    justify-content: space-around;
+}
+
+.nav-bar{
+    list-style: none;
+}
+
+.nav-bar a{
+    display: block;
+    color:darkorange;
+    text-decoration: none;
+    border: 2px solid rgb(94, 0, 128);
+    font-size: 1.2rem;
+    font-weight:600;
+    line-height: 2rem;
+    width:13rem;
+    text-align: center;
+    border-radius: 1rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.26);
+}
+
+.nav-bar a:hover{
+    color: #4f9906;
+    background-color: #e7d17a;
+}
+
+.nav-bar form{
+    
+    height:100%;
+}
+.logoutBtn{
+    display:block;
+    width:100%;
+    height:100%;
+    background:transparent;
+    border: none;
+    cursor: pointer;
+}
+

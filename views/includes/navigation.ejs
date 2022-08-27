@@ -1,0 +1,18 @@
+<nav>
+    <ul>
+        <li class="nav-bar"><a href="/" >Home</a></li>
+        <% if (isAuthenticated) { %>
+            <li class="nav-bar"><a href="/myshowlist" >My Show List</a></li>
+            <li class="nav-bar"><a href="/userShow" >Show</a></li>
+            <li class="nav-bar">
+                <form action="/logout" method="post" id="logoutform">
+                    <a href="#" onclick="document.getElementById('logoutform').submit();return false;">Logout</a>
+                </form>
+            </li>
+        <% } else { %>
+        <li class="nav-bar"><a href="/guestshow" >Show As A Guest</a></li>
+        <li class="nav-bar"><a href="/login" >Sign In</a></li>
+        <li class="nav-bar"><a href="/signup" >Sign Up</a></li>
+        <% } %>
+    </ul>
+</nav>

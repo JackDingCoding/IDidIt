@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+/*  Utitlity    */
+:root {
+    box-sizing: border-box;
+}
+
+*,
+::before,
+::after {
+    box-sizing: inherit;
+}
+/*body
+body{
+    background-image: url('../css/background.jpg');
+    background-size: cover;
+    opacity: 0.5;
+
+}*/
+html{
+    overflow-y:scroll;
+}
+body::before{
+    content: "";
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: -1;      /*放在内容背后*/
+    width: 100%;
+    height: 100%;
+    background: url(../img/background.jpg);
+    background-size: cover;
+  
+    opacity: 0.4;
+}
+/* layout */
+.main_container {
+    display: grid;
+    grid-template-areas: "title"
+        "nav"
+        "main";
+    /* grid-template-columns: 70% 30%;
+    grid-template-rows: auto; */
+    gap: 1.5em;
+    max-width: 1080px;
+    margin:0 auto;
+}
+
+header{
+    grid-area:title;
+}
+
+nav{
+    grid-area: nav;
+}
+/*  */
+.website-name h1{
+    font-family: 'Permanent Marker', cursive;
+    font-size: 4rem;
+    text-align: center;
+    margin-bottom: 0.5rem;
+}
+.main{
+    grid-area: main;
+}   
+
+.grid{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: stretch;
+}
+
+.card{
+    box-shadow: 0 2px 8px rgba(0,0,0,0.26);
+}
+
+.card__header,
+.card__content{
+    padding: 1rem;
+}
+
+.card__header h1,
+.card__content h1,
+.card__content h2,
+.card__content p{
+    margin: 0;
+}
+
+.card__image{
+    width: 100%;
+}
+
+.card__image img{
+    width: 100%;
+}
+/*
+.sidebar-left{
+    grid-area:sideLeft;
+}
+*/
+/* .card__author{
+    border-top: 1px;
+} */
+
+.sidebar-right{
+    grid-area:sideRight;
+
+}
+
+/* -----------------------------*/
+.btn{
+    display:inline-block;
+    padding: 0.25rem 1rem;
+    border:1px solid black;
+    color: blue;
+    background: transparent;
+    border-radius:3px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 600;
+    
+}

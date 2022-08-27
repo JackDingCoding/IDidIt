@@ -1,0 +1,14 @@
+.cool-item{
+    width: 20rem;
+    max-width: 95%;
+    margin: 1rem;
+}
+
+.item-title{
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+item-description{
+    text-align: center;
+}
